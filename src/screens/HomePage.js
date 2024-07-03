@@ -9,9 +9,7 @@ import { CustomButton } from '../components'
 const HomePage = () => {
 const [data, setData] = useState([])
 console.log('>>> All data: ',data[0]);
-console.log('>>> Title data: ',data[0].title);
-console.log('>>> Content data: ',data[0].content);
-console.log('>>> Lesson data: ',data[0].lesson);
+
 
   const sendData = async() => {
     try {
@@ -38,12 +36,6 @@ console.log('>>> Lesson data: ',data[0].lesson);
 
   return (
     <View style={styles.container}>
-      <Text>{data[0].title}</Text>
-      <Text>{data[0].content}</Text>
-      <Text>{data[0].lesson}</Text>
-      <Text>{data[1].title}</Text>
-      <Text>{data[1].content}</Text>
-      <Text>{data[1].lesson}</Text>
       <CustomButton name='Save' handleOnPress={sendData}></CustomButton>
       <CustomButton name='Get' handleOnPress={getData}></CustomButton>
     </View>
